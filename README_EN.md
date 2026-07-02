@@ -34,10 +34,6 @@ The script auto-detects `$ANDROID_HOME` (`~/Android/Sdk`, `/opt/android-sdk`, et
 
 APK output: `app/build/outputs/apk/debug/app-debug.apk`
 
-### CI / CD
-
-Every push triggers [GitHub Actions](.github/workflows/build.yml): builds a Debug APK and uploads as an Artifact (retained 90 days).
-
 ## 📁 Project Structure
 
 ```
@@ -127,7 +123,6 @@ KtxTemplate/
 | Technology | Role |
 |------------|------|
 | Shizuku | Privileged access to installed APK resources (APK Source mode) |
-| GitHub Actions | CI auto-build |
 
 ## 🙏 Acknowledgments
 
@@ -148,5 +143,3 @@ MIT License
 ---
 
 > ⚠️ This project is for educational research of the KTX texture format and Android native compilation techniques. Please respect the game's copyright — do not use for commercial purposes.
->
-> 📝 Docs / CI scaffolding assisted by Claude (Ponytail).
