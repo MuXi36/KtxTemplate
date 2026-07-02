@@ -146,3 +146,5 @@ MIT License
 ---
 
 > ⚠️ 本项目仅供学习研究 KTX 纹理格式与 Android 原生编译技术。请尊重游戏版权，勿用于商业用途。
+>
+> 📝 文档 / CI 脚手架由 Claude (Ponytail) 辅助整理。
