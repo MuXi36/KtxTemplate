@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 光遇 · PNG切割来源选择 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="@drawable/dialog_bg">
+
+    <!-- 标题区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/sky_wing"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选择PNG图集来源"
+            android:textSize="16sp"
+            android:textColor="#E8A449"
+            android:textStyle="bold"
+            android:letterSpacing="0.03" />
+    </LinearLayout>
+
+    <!-- 选项1：默认文件夹 -->
+    <LinearLayout
+        android:id="@+id/optionDefault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/btn_soft"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="1dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sky_candle"
+            android:layout_marginEnd="6dp"
+            android:alpha="0.85" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="默认文件夹"
+                android:textSize="14sp"
+                android:textColor="@color/sky_text_primary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Download/KtxConverter/"
+                android:textSize="10sp"
+                android:textColor="@color/sky_text_hint"
+                android:layout_marginTop="1dp"
+                android:ellipsize="middle"
+                android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 选项2：自选文件夹 -->
+    <LinearLayout
+        android:id="@+id/optionCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/btn_soft"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="1dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sky_pen"
+            android:layout_marginEnd="6dp"
+            android:alpha="0.85" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自选文件夹"
+                android:textSize="14sp"
+                android:textColor="@color/sky_text_primary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="从任意位置选择PNG图集"
+                android:textSize="10sp"
+                android:textColor="@color/sky_text_hint"
+                android:layout_marginTop="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 取消 -->
+    <TextView
+        android:id="@+id/optionCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textSize="14sp"
+        android:textColor="#908878"
+        android:gravity="center"
+        android:padding="14dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+</LinearLayout>

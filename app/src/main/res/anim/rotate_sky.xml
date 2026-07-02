@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 光遇 · 转换按钮旋转动画（源自 11e.xml 游戏原生参数） -->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:toDegrees="720"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:duration="2000"
+    android:repeatCount="infinite"
+    android:repeatMode="restart"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保存位置：薄荷青绿（生命/恢复） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#2A5A40"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#4A9060" android:endColor="#60B078" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="1dp" android:color="#80E0A0"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#407850"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#5BA870" android:endColor="#78C890" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="0.5dp" android:color="#90D8A8"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

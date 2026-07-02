@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══ 光遇 · 暖色系 ═══ -->
+    <color name="sky_amber">#E8A449</color>
+    <color name="sky_amber_dark">#D4943A</color>
+    <color name="sky_amber_light">#F4C88A</color>
+    <color name="sky_gold">#F4A950</color>
+    <color name="sky_flame">#FF8C42</color>
+
+    <!-- ═══ 光遇 · 冷色系 ═══ -->
+    <color name="sky_blue">#7EC8E3</color>
+    <color name="sky_blue_dark">#5B9FB5</color>
+    <color name="sky_navy">#1A2A40</color>
+    <color name="sky_twilight">#3A5070</color>
+
+    <!-- ═══ 光遇 · 背景 ═══ -->
+    <color name="sky_cream">#FFF8EC</color>
+    <color name="sky_cloud">#FFFAF5</color>
+    <color name="sky_cream_dark">#F0E4D0</color>
+
+    <!-- ═══ 文字 ═══ -->
+    <color name="sky_text_primary">#FF000000</color>
+    <color name="sky_text_secondary">#8B7355</color>
+    <color name="sky_text_hint">#B8A088</color>
+
+    <!-- ═══ 功能色 ═══ -->
+    <color name="sky_success">#66BB6A</color>
+    <color name="sky_danger">#D32F2F</color>
+    <color name="sky_warning">#FFA726</color>
+
+    <!-- ═══ 保留基础色 ═══ -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

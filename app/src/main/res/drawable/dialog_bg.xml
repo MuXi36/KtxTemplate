@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ReflectiveCard dialog background -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="-3dp" android:top="3dp" android:left="3dp" android:right="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#60000000" />
+            <corners android:radius="22dp" />
+        </shape>
+    </item>
+    <item android:bottom="1.5dp" android:top="1.5dp" android:left="1.5dp" android:right="1.5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E01E1A18" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:type="linear" android:angle="135"
+                android:startColor="#F01E1A18" android:endColor="#F02A2420" />
+            <corners android:radius="20dp" />
+            <stroke android:width="0.5dp" android:color="#25FFFFFF" />
+        </shape>
+    </item>
+    <item android:bottom="1dp" android:top="1dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <gradient android:type="linear" android:angle="135"
+                android:startColor="#18FFFFFF"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#0DFFFFFF" />
+            <corners android:radius="19dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:type="linear" android:angle="135"
+                android:startColor="#30E8A449"
+                android:centerColor="#10F4A950"
+                android:endColor="#25E8A449" />
+            <corners android:radius="20dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 文件来源：选中高亮版（暖棕→金） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#B87030"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#D48840" android:endColor="#F0B060" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="1dp" android:color="#F0D080"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#E0A860"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#F0C070" android:endColor="#F8D898" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="0.5dp" android:color="#F8E0A0"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

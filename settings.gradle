@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "KtxTemplate"
+rootProject.name = "Hello World Kotlin Android"
 include ':app'

@@ -1,0 +1,5 @@
+<!-- 光遇 · 游戏纹理分割线 -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/sky_ui_elem"
+    android:gravity="fill_horizontal"
+    android:tileMode="disabled" />

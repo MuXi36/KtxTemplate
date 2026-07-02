@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.KtxConverter" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/sky_amber</item>
+        <item name="colorPrimaryDark">@color/sky_amber_dark</item>
+        <item name="colorAccent">@color/sky_blue</item>
+        <item name="android:colorBackground">#0D1117</item>
+        <item name="android:statusBarColor">@color/sky_navy</item>
+        <item name="android:navigationBarColor">#0D1117</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="alertDialogTheme">@style/SkyDialogTheme</item>
+        <item name="materialAlertDialogTheme">@style/SkyDialogTheme</item>
+    </style>
+</resources>

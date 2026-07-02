@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 光遇·极光背景：多层渐变模拟 Soft Aurora 效果 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底层：奶油暖白 -->
+    <item>
+        <shape>
+            <solid android:color="@color/sky_cloud"/>
+        </shape>
+    </item>
+    <!-- 层2：顶部琥珀光芒（径向渐变模拟光源） -->
+    <item>
+        <shape>
+            <gradient
+                android:type="radial"
+                android:centerX="0.5"
+                android:centerY="0.15"
+                android:gradientRadius="70%p"
+                android:startColor="#30E8A449"
+                android:endColor="#00FFF8EC"/>
+        </shape>
+    </item>
+    <!-- 层3：底部天蓝淡入 -->
+    <item>
+        <shape>
+            <gradient
+                android:type="linear"
+                android:angle="90"
+                android:startColor="#007EC8E3"
+                android:endColor="#187EC8E3"/>
+        </shape>
+    </item>
+    <!-- 层4：中间金色柔光 -->
+    <item>
+        <shape>
+            <gradient
+                android:type="radial"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:gradientRadius="50%p"
+                android:startColor="#10F4A950"
+                android:endColor="#00FFF8EC"/>
+        </shape>
+    </item>
+</layer-list>

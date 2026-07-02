@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 颜色指示点（琥珀小圆点） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient android:startColor="@color/sky_amber" android:endColor="@color/sky_gold" android:angle="135"/>
+</shape>

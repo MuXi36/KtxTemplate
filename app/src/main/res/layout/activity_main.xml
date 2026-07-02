@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 光遇主题 UI 2.0：固定底部日志 + 可滚动控件区 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- 1. 动态极光背景 -->
+    <com.ktxconverter.app.AuroraBackground
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 2. 光束效果 -->
+    <com.ktxconverter.app.BeamsView
+        android:id="@+id/beamsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 主布局：单页滚动（NestedScrollView 支持内嵌滚动） -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:clipToPadding="false">
+
+            <!-- Shizuku 状态 -->
+            <TextView
+                android:id="@+id/tvShizukuStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="@color/sky_text_hint"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:alpha="0.8" />
+
+        <!-- 头部 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp">
+
+            <com.ktxconverter.app.CandleFlameView
+                android:id="@+id/candleFlame"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="4dp" />
+
+            <com.ktxconverter.app.ShinyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KTX→PNG工具"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#E8A449"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sky · CotL Texture Tool"
+                android:textSize="11sp"
+                android:textColor="@color/sky_text_hint"
+                android:letterSpacing="0.08"
+                android:alpha="0.7" />
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sky_logotext"
+                android:adjustViewBounds="true"
+                android:alpha="0.6"
+                android:layout_marginTop="4dp" />
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_amber"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- 文件来源 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_glow"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/sky_candle"
+                    android:layout_marginEnd="5dp"
+                    android:alpha="0.85" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文件来源"
+                    android:textSize="12sp"
+                    android:textColor="@color/sky_text_secondary"
+                    android:letterSpacing="0.04" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button android:id="@+id/btnSourceSingle" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="单张KTX" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_source" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnSourceApk" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="APK批量" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_source" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnSourcePick" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="选几张" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_source" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnSourceFolder" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="选文件夹" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_source" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFilePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <Button android:id="@+id/btnBrowseFile" android:layout_width="wrap_content" android:layout_height="38dp" android:text="浏览..." android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_soft" android:stateListAnimator="@null" android:elevation="0dp" android:minWidth="0dp" android:minHeight="0dp" android:paddingStart="12dp" android:paddingEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/tvFilePath"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="未选择"
+                    android:textSize="11sp"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:textColor="@color/sky_text_hint" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView android:layout_width="match_parent" android:layout_height="4dp" android:src="@drawable/divider_sky" android:scaleType="fitXY" android:alpha="0.4" android:layout_marginBottom="8dp" />
+
+        <!-- 颜色模式 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_glow"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="6dp">
+
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/sky_gem" android:layout_marginEnd="5dp" android:alpha="0.85" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="颜色模式" android:textSize="12sp" android:textColor="@color/sky_text_secondary" android:letterSpacing="0.04" />
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+                <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/sky_cog" android:layout_marginEnd="3dp" android:alpha="0.7" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="加载Lua" android:textSize="11sp" android:textColor="@color/sky_success" />
+            </LinearLayout>
+
+            <!-- 182阶调色板 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="6dp" android:paddingEnd="6dp" android:paddingTop="2dp" android:paddingBottom="2dp" android:background="@drawable/btn_soft">
+                <View android:layout_width="5dp" android:layout_height="5dp" android:background="@drawable/dot_amber" android:layout_marginEnd="5dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="182阶调色板" android:textSize="11sp" android:textColor="@color/sky_text_secondary" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnColorGray" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+            <Button android:id="@+id/btnColorLut" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+            <Button android:id="@+id/btnColorPalette" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" android:text="182阶调色板" />
+            <Button android:id="@+id/btnColorAllInOne" android:layout_width="0dp" android:layout_height="0dp" android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView android:layout_width="match_parent" android:layout_height="4dp" android:src="@drawable/divider_sky" android:scaleType="fitXY" android:alpha="0.4" android:layout_marginBottom="8dp" />
+
+        <!-- 保存位置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_glow"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/sky_heart" android:layout_marginEnd="5dp" android:alpha="0.85" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存位置" android:textSize="12sp" android:textColor="@color/sky_text_secondary" android:letterSpacing="0.04" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnSaveFolder" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="文件夹" android:drawableStart="@drawable/sky_candle" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_cloud" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnSaveGallery" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="相册" android:drawableStart="@drawable/sky_fav" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_cloud" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnSaveCustom" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="自选" android:drawableStart="@drawable/sky_pen" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_cloud" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvSaveHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="文件夹：+ .nomedia，相册不可见" android:textSize="11sp" android:textColor="@color/sky_text_hint" android:layout_marginTop="8dp" android:alpha="0.8" />
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <ImageView android:layout_width="match_parent" android:layout_height="4dp" android:src="@drawable/divider_sky" android:scaleType="fitXY" android:alpha="0.4" android:layout_marginBottom="8dp" />
+
+        <!-- 工具 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_glow"
+            android:elevation="2dp"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="10dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/sky_cog" android:layout_marginEnd="5dp" android:alpha="0.85" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="工具" android:textSize="12sp" android:textColor="@color/sky_text_secondary" android:letterSpacing="0.04" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnAtlasCut" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="图集切割" android:drawableStart="@drawable/sky_cog" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/white" android:background="@drawable/btn_tool" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnLoadLua" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="加载Lua" android:textSize="11sp" android:textColor="@color/white" android:background="@drawable/btn_tool" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnPngCut" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="PNG切割" android:drawableStart="@drawable/sky_fire" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/white" android:background="@drawable/btn_tool" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+                <Button android:id="@+id/btnLoadTemplate" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="2dp" android:text="色板" android:drawableStart="@drawable/sky_gem" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_soft" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:visibility="gone" />
+                <Button android:id="@+id/btnRawConvert" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="纯KTX→PNG" android:textSize="10sp" android:textColor="@color/white" android:background="@drawable/btn_tool" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" />
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvLuaStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textSize="11sp" android:textColor="@color/sky_success" android:layout_marginTop="8dp" android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 主操作区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="6dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/sky_wing" android:layout_marginEnd="10dp" android:alpha="0.55" />
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/sky_fire" android:layout_marginEnd="10dp" android:alpha="0.55" />
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/sky_star" android:alpha="0.55" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btnConvert" android:layout_width="match_parent" android:layout_height="48dp" android:text="开始转换" android:drawableStart="@drawable/sky_star" android:drawablePadding="6dp" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/white" android:background="@drawable/btn_convert" android:stateListAnimator="@null" android:elevation="4dp" android:minHeight="0dp" android:minWidth="0dp" android:letterSpacing="0.06" android:paddingStart="4dp" android:paddingEnd="4dp" android:layout_marginBottom="4dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="2dp">
+                <Button android:id="@+id/btnStop" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="暂停" android:drawableStart="@drawable/sky_wing" android:drawablePadding="4dp" android:textSize="12sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_danger" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="6dp" android:paddingEnd="6dp" android:enabled="false" />
+                <Button android:id="@+id/btnRestart" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="4dp" android:text="重来" android:drawableStart="@drawable/sky_cape" android:drawablePadding="4dp" android:textSize="12sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_soft" android:stateListAnimator="@null" android:elevation="0dp" android:minHeight="0dp" android:minWidth="0dp" android:paddingStart="4dp" android:paddingEnd="4dp" android:enabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 进度条（始终可见） -->
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="11sp"
+            android:textColor="@color/sky_amber_dark"
+            android:gravity="center"
+            android:layout_marginBottom="2dp" />
+
+        <!-- 日志标题 -->
+        <LinearLayout
+            android:id="@+id/llLogHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_card_glow">
+
+            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/sky_bulb" android:layout_marginEnd="5dp" android:alpha="0.7" />
+            <TextView android:id="@+id/tvLogToggle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="▶ 日志" android:textSize="12sp" android:textColor="@color/sky_text_secondary" android:letterSpacing="0.04" />
+            <Button android:id="@+id/btnCopyLog" android:layout_width="wrap_content" android:layout_height="36dp" android:text="复制" android:drawableStart="@drawable/sky_bulb" android:drawablePadding="4dp" android:textSize="11sp" android:textColor="@color/sky_text_primary" android:background="@drawable/btn_soft" android:stateListAnimator="@null" android:elevation="0dp" android:minWidth="64dp" android:minHeight="0dp" android:paddingStart="10dp" android:paddingEnd="10dp" />
+        </LinearLayout>
+
+        <!-- 日志内容（可折叠，展开时280dp，内部独立可滚） -->
+        <ScrollView
+            android:id="@+id/svLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/bg_log"
+            android:nestedScrollingEnabled="true">
+
+            <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="等待操作..."
+                android:textSize="12sp"
+                android:textColor="@color/sky_text_secondary"
+                android:typeface="monospace"
+                android:padding="10dp"
+                android:lineSpacingExtra="2dp"
+                android:textIsSelectable="true" />
+        </ScrollView>
+
+        </LinearLayout>  <!-- inner -->
+
+    </androidx.core.widget.NestedScrollView>  <!-- 根 -->
+
+    <!-- 4. 星空粒子覆盖层 -->
+    <com.ktxconverter.app.StardustOverlay
+        android:id="@+id/stardustOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

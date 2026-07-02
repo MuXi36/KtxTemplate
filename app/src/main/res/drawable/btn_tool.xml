@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 工具：紫藤（魔法/先祖之灵） -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#4A2858"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#7A48A0" android:endColor="#9860C0" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="1dp" android:color="#C090E0"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="2dp">
+                <shape><solid android:color="#604078"/><corners android:radius="13dp"/></shape>
+            </item>
+            <item android:bottom="1dp">
+                <shape>
+                    <gradient android:startColor="#8860B0" android:endColor="#A878D0" android:angle="135"/>
+                    <corners android:radius="13dp"/>
+                    <stroke android:width="0.5dp" android:color="#C0A0E0"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
