@@ -150,6 +150,16 @@ class MainActivity : AppCompatActivity() {
         GlareSweepEffect.applyGlare(b.btnBrowseFile, glareAlpha = 0.18f)
         b.stardustOverlay.startAnimation()
 
+        // 🥚 彩蛋：点击 sky_logotext 播放彩蛋音频
+        b.ivSkyLogo.setOnClickListener {
+            try {
+                val mp = android.media.MediaPlayer.create(this, R.raw.kunkun)
+                mp?.setOnCompletionListener { it.release() }
+                mp?.start()
+                Toast.makeText(this, "🐔 哎～哟～", Toast.LENGTH_SHORT).show()
+            } catch (_: Exception) {}
+        }
+
         // 暂停/继续按钮（单击暂停/继续，长按硬停止）
         b.btnStop.setOnClickListener {
             vm.pauseResumeConversion()
