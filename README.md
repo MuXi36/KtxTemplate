@@ -12,21 +12,19 @@ Android 端光遇（Sky: Children of the Light）KTX 纹理文件批量转换器
 
 ## 编译
 
-**环境要求：** Android SDK (API 34) + Gradle 8.4 + JDK 17+
+**环境要求：** JDK 17+，Android SDK 自动检测
 
 ```bash
+git clone https://github.com/MuXi36/KtxTemplate.git
 cd KtxTemplate
-./gradlew assembleDebug
+bash build.sh
 ```
+
+脚本自动检测 `$ANDROID_HOME` 常见路径，无需手动配置。
+
+也支持 release 模式：`bash build.sh release`
 
 APK 输出路径：`app/build/outputs/apk/debug/app-debug.apk`
-
-如需在 Termux 中编译，先安装 Android SDK 并设置 `ANDROID_HOME`：
-
-```bash
-export ANDROID_HOME=/path/to/android-sdk
-./gradlew assembleDebug
-```
 
 ## 项目结构
 
@@ -50,6 +48,7 @@ export ANDROID_HOME=/path/to/android-sdk
 │   ├── bin/astcenc              # ASTC 原生解码器
 │   ├── bin/python3              # Python 3.12 运行时
 │   └── bin/ktx2png*.py          # 转换脚本
+├── build.sh                     # 一键编译脚本
 └── gradle/                      # Gradle Wrapper
 ```
 
