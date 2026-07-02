@@ -1,5 +1,7 @@
 # KtxTemplate — 光遇 KTX 纹理转 PNG 工具
 
+[![中文](https://img.shields.io/badge/lang-中文-red)]() [![EN](https://img.shields.io/badge/lang-EN-blue)](README_EN.md)
+
 Android 端《光·遇》（Sky: Children of the Light）KTX 纹理文件批量转换器。
 
 支持 ETC2 / EAC / ASTC 等压缩纹理格式解码，自动切割 Atlas 纹理集，通过内置 182 阶暖色调色板还原光遇原画色彩，最终导出为 PNG 标准格式。
@@ -117,7 +119,7 @@ KtxTemplate/
 |------|------|------|
 | Python 3.12 | python.org | KTX→PNG 转换脚本运行环境 |
 | NumPy | numpy.org | 像素数组处理与色彩映射 |
-|PVRTexTool CLI v5.7 | Imagination Technologies | EAC/ETC 压缩纹理解码 |
+| PVRTexTool CLI v5.7 | Imagination Technologies | EAC/ETC 压缩纹理解码 |
 | astcenc v4.x | ARM Ltd. | ASTC 压缩纹理解码 |
 
 ### 外部集成
