@@ -34,10 +34,6 @@ bash build.sh release  # Release 版
 
 APK 输出：`app/build/outputs/apk/debug/app-debug.apk`
 
-### CI / CD
-
-每次 push 自动触发 [GitHub Actions](.github/workflows/build.yml)，编译 Debug APK 并上传为 Artifact（保留 90 天）。
-
 ## 📁 项目结构
 
 ```
@@ -127,7 +123,6 @@ KtxTemplate/
 | 技术 | 用途 |
 |------|------|
 | Shizuku | 提权访问已安装 APK 资源（APK 源模式） |
-| GitHub Actions | CI 自动编译 |
 
 ## 🙏 致谢
 
@@ -148,5 +143,3 @@ MIT License
 ---
 
 > ⚠️ 本项目仅供学习研究 KTX 纹理格式与 Android 原生编译技术。请尊重游戏版权，勿用于商业用途。
->
-> 📝 文档 / CI 脚手架由 Claude (Ponytail) 辅助整理。
