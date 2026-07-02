@@ -79,11 +79,15 @@
                 android:alpha="0.7" />
 
             <ImageView
+                android:id="@+id/ivSkyLogo"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sky_logotext"
                 android:adjustViewBounds="true"
                 android:alpha="0.6"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
                 android:layout_marginTop="4dp" />
 
             <View
